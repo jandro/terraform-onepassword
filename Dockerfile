@@ -12,7 +12,7 @@ RUN git clone https://github.com/hashicorp/terraform.git ./ && \
     git checkout v${TERRAFORM_VERSION} && \
     /bin/bash scripts/build.sh
 
-ENV OP_TF_PROVIDER=0.5.0
+ENV OP_TF_PROVIDER=1.1.0
 
 WORKDIR $GOPATH/src/github.com/terraform-provider-1password
 RUN git clone https://github.com/anasinnyk/terraform-provider-1password.git ./ && \
