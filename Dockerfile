@@ -27,7 +27,7 @@ WORKDIR /root/.terraform.d/plugins
 COPY --from=terraform-onepassword /bin/terraform-provider-onepassword .
 
 RUN set -xe; \
-    apk add --update libc6-compat musl bash make jq; \
+    apk add --update libc6-compat musl bash make jq git; \
     pip install aws-mfa
 
 WORKDIR /
